@@ -76,7 +76,7 @@ export class NoteListComponent implements OnInit, OnDestroy {
     this.store.dispatch(new SetActiveNote(note));
   }
 
-  public removeNote(note: NoteEntity, index: number) {
+  public removeNote(note: NoteEntity) {
     this.dialog
       .open(NoteRemoveDialogComponent, {
         data: {
@@ -87,7 +87,7 @@ export class NoteListComponent implements OnInit, OnDestroy {
       .beforeClosed()
       .subscribe((result) => {
         if (result === true) {
-          this.noteRemove(index, note);
+          this.noteRemove(note);
         }
       });
   }
@@ -100,8 +100,9 @@ export class NoteListComponent implements OnInit, OnDestroy {
     this.saveNotesToStorage();
   }
 
-  public noteRemove(index: number, note: NoteEntity) {
-    this.notes.splice(index, 1);
+  public noteRemove(note: NoteEntity) {
+    const noteIndex = this.notes.indexOf(note);
+    this.notes.splice(noteIndex, 1);
     this.tagsHandler();
     if (this.activeNote.id === note.id) {
       const emptyNote = new NoteEntity();

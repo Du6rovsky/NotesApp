@@ -1,13 +1,13 @@
 <mat-list class="notes-list">
   <mat-list-item class="note-item"
                  [ngClass]="{'active': note.id === activeNote.id}"
-                 *ngFor="let note of filteredNotes | orderBy: ['-date']; let nIdx = index"
+                 *ngFor="let note of filteredNotes | orderBy: ['-date']"
                  (click)="setActiveNote(note)">
     <p class="note-header">
       {{ note.header }}
       <span class="date"> {{ note.date }} </span>
     </p>
-    <button mat-button (click)="$event.stopPropagation(); removeNote(note, nIdx)">
+    <button mat-button (click)="$event.stopPropagation(); removeNote(note)">
       <i class="icon fas fa-times"></i>
     </button>
     <mat-divider></mat-divider>
