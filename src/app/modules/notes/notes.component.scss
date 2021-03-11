@@ -1,0 +1,29 @@
+:host ::ng-deep {
+  .notes-container {
+    height: 100%;
+    .notes-sidenav {
+      width: 300px;
+      overflow: hidden;
+      .mat-drawer-inner-container {
+        overflow: hidden;
+      }
+      .search-header {
+        height: 62px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+      button {
+        display: block;
+        float: right;
+        min-width: initial;
+        font-size: 20px;
+        margin: 5px;
+      }
+    }
+    .sidenav-content {
+      margin: 0 !important;
+    }
+  }
+}

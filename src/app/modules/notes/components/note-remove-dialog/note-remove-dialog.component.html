@@ -1,0 +1,18 @@
+<div class="dialog-confirm">
+  <div *ngIf="data.message" [innerHTML]="data.message" class="message bordered"></div>
+  <div class="controls">
+    <button
+      mat-raised-button
+      color="warn"
+      [attr.data-test]="'dialog-confirm'"
+      [mat-dialog-close]="true"
+    >
+      {{ 'Remove' }}
+    </button>
+    <button
+      mat-raised-button
+      [attr.data-test]="'dialog-cancel'" [mat-dialog-close]="false">
+      {{ 'Cancel' }}
+    </button>
+  </div>
+</div>

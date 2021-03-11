@@ -1,0 +1,18 @@
+<mat-sidenav-container class="notes-container">
+  <mat-sidenav mode="side" opened class="notes-sidenav">
+    <div class="search-header">
+      <app-search></app-search>
+      <button mat-raised-button
+              color="primary" (click)="notesListElem.addNote()">
+        <i class="icon fas fa-plus"></i>
+      </button>
+    </div>
+    <mat-divider></mat-divider>
+    <app-note-list #notesListElem></app-note-list>
+    <mat-divider></mat-divider>
+    <app-tags></app-tags>
+  </mat-sidenav>
+  <mat-sidenav-content class="notes-content">
+    <app-note-form></app-note-form>
+  </mat-sidenav-content>
+</mat-sidenav-container>

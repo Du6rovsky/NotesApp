@@ -1,0 +1,50 @@
+.note {
+  .note-header {
+    padding: 5px;
+    height: 62px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    form {
+      width: 100%;
+
+      .mat-form-field {
+        width: 100%;
+        font-size: 1.5em;
+
+        .mat-form-field-wrapper {
+          padding: 0;
+        }
+
+        .mat-form-field-underline {
+          position: initial;
+        }
+      }
+    }
+  }
+  .note-content {
+    padding: 5px;
+
+    .mat-form-field {
+      width: 100%;
+    }
+
+    textarea {
+      width: 100%;
+      resize: none;
+    }
+
+    .hash_tag {
+      text-transform: uppercase;
+      font-size: large;
+      font-weight: bold;
+      color: #673ab7;
+
+      &.active {
+        color: aquamarine;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+:host ::ng-deep {
+  .tags {
+    padding: 5px;
+    display: flex;
+    height: 200px;
+    overflow: auto;
+
+    .mat-chip-list {
+      display: block;
+
+      .mat-chip {
+        cursor: pointer;
+        background-color: #673ab7;
+        color: white;
+
+        &.active {
+          background-color: aquamarine;
+          color: black;
+        }
+      }
+    }
+  }
+}

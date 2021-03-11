@@ -1,0 +1,42 @@
+:host ::ng-deep {
+  .notes-list {
+    padding-top: initial;
+    height: calc(100% - 200px);
+    overflow: auto;
+
+    .note-item {
+      cursor: pointer;
+      display: flex !important;
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between !important;
+      align-items: center;
+      overflow: hidden;
+      &:hover {
+        background-color: aliceblue;
+      }
+      &.active {
+        background-color: aliceblue;
+      }
+      .note-header {
+        display: block;
+        width: 225px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+
+        .date {
+          position: absolute;
+          bottom: 8%;
+          left: 5%;
+          font-size: 0.6em;
+        }
+      }
+      button {
+        display: block;
+        float: right;
+        margin: 5px;
+      }
+    }
+  }
+}

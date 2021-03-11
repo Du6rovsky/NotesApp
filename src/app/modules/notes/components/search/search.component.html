@@ -1,0 +1,10 @@
+<form action="#" [formGroup]="searchForm" class="search-form">
+  <mat-form-field appearance="outline" class="search">
+    <mat-label>Search note</mat-label>
+    <input
+      matInput
+      formControlName="search"
+      appInputDebounce
+      (debounce)="onSearch($event)">
+  </mat-form-field>
+</form>

@@ -1,0 +1,31 @@
+<div class="note">
+  <div class="note-header" *ngIf="note?.id">
+    <h2 *ngIf="!isEditHeader" (click)="toEditHeader()">
+      {{ note.header }}
+    </h2>
+    <form [formGroup]="noteForm"
+          *ngIf="isEditHeader"
+          (clickOutside)="isEditHeader ? toSaveHeader(): false">
+      <mat-form-field class="example-full-width">
+        <mat-label>Note header</mat-label>
+        <input matInput formControlName="header">
+      </mat-form-field>
+    </form>
+  </div>
+  <mat-divider></mat-divider>
+  <div class="note-content" *ngIf="note?.id">
+    <p #noteDesc
+       *ngIf="!isEditContent"
+       (click)="toEditContent()"
+       [innerHTML]="note.content">
+    </p>
+    <form [formGroup]="noteForm" *ngIf="isEditContent"
+          (clickOutside)="isEditContent ? toSaveContent(): false">
+      <mat-form-field appearance="fill">
+        <mat-label>Note content</mat-label>
+        <textarea matInput formControlName="content"
+                  cdkTextareaAutosize></textarea>
+      </mat-form-field>
+    </form>
+  </div>
+</div>

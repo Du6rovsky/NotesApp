@@ -1,0 +1,10 @@
+<div class="tags">
+  <mat-divider></mat-divider>
+  <mat-chip-list #chipList aria-label="Fruit selection">
+    <mat-chip *ngFor="let tag of tags"
+              [ngClass]="{'active':  tag === activeTag}"
+              (click)="filterByTag(tag)">
+      {{ tag }}
+    </mat-chip>
+  </mat-chip-list>
+</div>
