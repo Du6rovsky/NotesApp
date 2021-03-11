@@ -40,7 +40,7 @@ export class NoteListComponent implements OnInit, OnDestroy {
       .pipe(takeUntil(this.destroy$))
       .subscribe((res) => {
         this.activeTag = res;
-        if (!this.activeNote.tags.includes(this.activeTag)) {
+        if (this.activeTag && !this.activeNote.tags.includes(this.activeTag)) {
           const emptyNote = new NoteEntity();
           emptyNote.id = '';
           this.store.dispatch(new SetActiveNote(emptyNote));
