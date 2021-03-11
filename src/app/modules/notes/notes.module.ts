@@ -20,7 +20,7 @@ import {TagsComponent} from './components/tags/tags.component';
 import {ClickOutsideModule} from 'ng-click-outside';
 import {NoteRemoveDialogComponent} from './components/note-remove-dialog/note-remove-dialog.component';
 import {MatDialogModule} from '@angular/material/dialog';
-import {PipesModule} from '@app/core/entities/pipes.module';
+import {PipesModule} from '@app/core/pipes/pipes.module';
 
 @NgModule({
   declarations: [

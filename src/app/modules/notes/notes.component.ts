@@ -7,8 +7,6 @@ import {Component, OnInit, ViewEncapsulation} from '@angular/core';
   encapsulation: ViewEncapsulation.Emulated
 })
 export class NotesComponent implements OnInit {
-  public q: string = '';
-
   constructor() {
   }
 
